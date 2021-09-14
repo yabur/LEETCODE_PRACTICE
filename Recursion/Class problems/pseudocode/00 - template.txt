@@ -1,0 +1,20 @@
+function subordinate(input, subproblem, partial_solution, result):
+	if base_case_condition:
+		increment result with partial_solution
+		return
+	
+	# increment subproblem
+	# increment partial solution
+	# recursively call subordinates
+
+function root_manager(input):
+	result = []
+	
+	# initialize subproblem
+	# initialize partial solution
+	
+	# fill in the blanks
+	subordinate(input, subproblem, partial_solution, result)
+	
+	return result
+	

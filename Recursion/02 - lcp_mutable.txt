@@ -1,0 +1,25 @@
+function subordinate(input, subproblem, partial_solution, result):
+	if subproblem == len(input):
+		result.push(copy(partial_solution)) # careful
+		return
+	
+	if input[subproblem].isdigit():
+		partial_solution.push(input[subproblem])
+		subordinate(input, subproblem + 1, partial_solution, result)
+		partial_solution.pop()
+	else:
+		partial_solution.append(input[subproblem].upper())
+		subordinate(input, subproblem + 1, partial_solution, result)
+		partial_solution.pop()
+		
+		partial_solution.append(input[subproblem].lower())
+		subordinate(input, subproblem + 1, partial_solution + input[subproblem].lower(), result)
+		partial_solution.pop()
+
+function root_manager(input):
+	result = []
+	
+	subordinate(input, 0, [], result)
+	
+	return result
+	

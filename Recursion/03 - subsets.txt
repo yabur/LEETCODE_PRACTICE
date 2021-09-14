@@ -1,0 +1,23 @@
+function subordinate(input, subproblem, partial_solution, result):
+	if subproblem == len(input):
+		result.push(copy(partial_solution))
+		return
+	
+	# increment subproblem
+	# increment partial solution
+	# recursively call subordinates
+	
+	subordinate(input, subproblem + 1, partial_solution, result)
+	
+	partial_solution.push(input[subproblem])
+	subordinate(input, subproblem + 1, partial_solution, result)
+	partial_solution.pop()
+
+function root_manager(input):
+	result = []
+		
+	# fill in the blanks
+	subordinate(input, 0, [], result)
+	
+	return result
+	

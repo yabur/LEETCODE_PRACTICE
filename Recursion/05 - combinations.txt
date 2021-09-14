@@ -1,0 +1,28 @@
+# partial_solution: slate
+function subordinate(n, k, subproblem, partial_solution, results):
+	if len(partial_solution) == k: # constraint (base case # 01)
+		results.push(copy(partial_solution)
+		return # pruning / backtrack
+		
+	if subproblem == n + 1: # base case 02: end of state
+		return
+	
+	# exclude
+	subordinate(n, k, subproblem + 1, partial_solution, results)
+
+	# include
+	partial_solution.add(subproblem)
+	subordinate(n, k, subproblem + 1, partial_solution, results)
+	partial_solution.pop()
+	
+	
+// [1,2,3,4]
+// [0,1,2,3] 0 -> len(input) - 1
+function root_manager(n, k):
+	results = [] # combinatorial objects
+		
+	# fill in the blanks
+	subordinate(n, k, 1, [], results)
+	
+	return results
+	

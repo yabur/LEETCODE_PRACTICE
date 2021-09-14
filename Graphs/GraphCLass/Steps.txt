@@ -1,0 +1,30 @@
+is this a graph problem?
+     yes, says undirected graph in the title
+
+would a traversal help?
+    traversals, explore a connected component and this is find # of 
+    connected component, so yes.
+
+What's the extention on top of base dfs/bfs?
+     count the number of traversals
+
+code it up
+
+
+Coding it up:
+     1. Do we need to turn the graph into something we can traversE?
+          Build the graph
+
+               edgelist -> adj_list
+
+     2. outer loop?
+          do we need a loop organizing when we run dfs/bfs?
+
+          Yes, Beause we need to for sure visit every node in the graph.
+          Do we need to run multiple traversals?
+          yes.
+
+          Shortest path problem example of single traversal problem.
+           (path)
+                                                    
+    
